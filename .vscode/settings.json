@@ -1,0 +1,35 @@
+{
+  "html.format.endWithNewline": true,
+  "html.format.indentHandlebars": true,
+  "html.format.indentInnerHtml": true,
+  "html.format.maxPreserveNewLines": 0,
+  "html.format.wrapLineLength": 80,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.tabSize": 2,
+  "eslint.options": {
+    "configFile": ".eslintrc.json",
+    "extensions": [".ts", ".html"]
+  },
+  "eslint.validate": ["javascript", "typescript", "html"],
+  "prettier.jsxBracketSameLine": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 80,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.referencesCodeLens.showOnAllFunctions": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports.eslint": true
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "extensions.ignoreRecommendations": false,
+  "typescript.preferences.includePackageJsonAutoImports": "on",
+  "path-intellisense.showHiddenFiles": true,
+  "prettier.configPath": ".prettierrc",
+  "angular.log": "off",
+  "telemetry.enableCrashReporter": false,
+  "telemetry.enableTelemetry": false
+}

@@ -1,0 +1,63 @@
+:host {
+  height: 100%;
+  display: grid;
+  grid-gap: 12px;
+  grid-template-rows: min-content 1fr;
+}
+
+mat-toolbar {
+  justify-content: space-between;
+}
+
+.history {
+  gap: 12px;
+  height: 100%;
+  display: grid;
+  overflow: hidden;
+  grid-template-rows: min-content 1fr;
+
+  > h1 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  > .shows {
+    gap: 12px;
+    display: grid;
+    padding: 0 12px 12px;
+    overflow: hidden scroll;
+    justify-content: center;
+    grid-template-rows: repeat(auto-fill, 550px);
+    grid-template-columns: repeat(auto-fill, 300px);
+  }
+}
+
+.search {
+  display: grid;
+  overflow: auto;
+  grid-gap: 12px;
+  padding: 0 12px 12px;
+  justify-items: center;
+  grid-template-rows: min-content 1fr;
+
+  > .searchBox {
+    gap: 8px;
+    display: grid;
+    align-items: baseline;
+    grid-auto-flow: column;
+    justify-content: center;
+
+    > mat-form-field {
+      width: 300px;
+
+      input {
+        color: #fff;
+      }
+    }
+  }
+
+  > h2 {
+    color: #fff;
+  }
+}

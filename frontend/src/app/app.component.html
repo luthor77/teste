@@ -1,0 +1,59 @@
+<mat-toolbar>
+  <button
+    (click)="currentAction = 'search'"
+    [color]="currentAction === 'search' ? 'primary' : null"
+    mat-button
+  >
+    Buscar
+  </button>
+  <h1>MK SHOWS</h1>
+  <button
+    (click)="currentAction = 'history'"
+    [color]="currentAction === 'history' ? 'primary' : null"
+    mat-button
+  >
+    Histórico
+  </button>
+</mat-toolbar>
+
+<ng-container [ngSwitch]="currentAction">
+  <div class="search" *ngSwitchCase="'search'">
+    <div class="searchBox">
+      <mat-form-field>
+        <mat-label>Digite o nome do filme ou série para buscar</mat-label>
+        <input
+          autofocus
+          [formControl]="searchControl"
+          (keyup.enter)="searchControl.valid && search(searchControl.value)"
+          matInput
+        />
+        <mat-error>Digite pelo menos uma letra</mat-error>
+      </mat-form-field>
+
+      <button
+        [disabled]="searchControl.invalid"
+        (click)="search(searchControl.value)"
+        mat-raised-button
+      >
+        Buscar
+      </button>
+    </div>
+
+    <app-show *ngIf="soughtShow" [show]="soughtShow"></app-show>
+
+    <h2 *ngIf="notFound">
+      Nenhum filme ou série encontrada para o termo buscado
+    </h2>
+  </div>
+
+  <div class="history" *ngSwitchCase="'history'">
+    <h1>Histórico de exibições bucadas</h1>
+
+    <div class="shows">
+      <app-show
+        *ngFor="let show of history$ | async; trackBy: trackByFn"
+        [show]="show"
+      ></app-show>
+    </div>
+  </div>
+</ng-container>

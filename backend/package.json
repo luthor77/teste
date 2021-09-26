@@ -1,0 +1,65 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "Backend",
+  "keywords": [
+    "loopback-application",
+    "loopback"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "engines": {
+    "node": ">=10.16"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rimraf dist *.tsbuildinfo .eslintcache",
+    "lint": "npm run prettier:check && npm run eslint",
+    "lint:fix": "npm run eslint:fix && npm run prettier:fix",
+    "prettier:cli": "prettier \"**/*.ts\" \"**/*.js\"",
+    "prettier:check": "npm run prettier:cli -- -l",
+    "prettier:fix": "npm run prettier:cli -- --write",
+    "eslint": "eslint .",
+    "eslint:fix": "npm run eslint -- --fix",
+    "pretest": "npm run rebuild",
+    "posttest": "npm run lint",
+    "openapi-spec": "node ./dist/openapi-spec",
+    "prestart": "npm run rebuild",
+    "start": "node -r source-map-support/register .",
+    "prepare": "npm run build",
+    "rebuild": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "author": "Vitor Alves <vitor@getconnect.com.br>",
+  "license": "",
+  "files": [
+    "README.md",
+    "dist",
+    "src",
+    "!*/__tests__"
+  ],
+  "dependencies": {
+    "@loopback/boot": "^3.4.3",
+    "@loopback/core": "^2.17.0",
+    "@loopback/repository": "^3.7.2",
+    "@loopback/rest": "^10.0.1",
+    "@loopback/rest-explorer": "^3.3.3",
+    "@loopback/service-proxy": "^3.2.3",
+    "loopback-connector-postgresql": "^5.4.0",
+    "loopback-connector-rest": "^3.7.0",
+    "tslib": "^2.0.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.20",
+    "@loopback/testlab": "^3.4.3",
+    "@types/node": "^10.17.60",
+    "prettier": "^2.4.0",
+    "@loopback/eslint-config": "^11.0.1",
+    "eslint": "^7.32.0",
+    "typescript": "~4.3.5"
+  }
+}

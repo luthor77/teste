@@ -1,0 +1,17 @@
+mat-card-header {
+  height: 80px;
+
+  & ::ng-deep .mat-card-header-text {
+    display: grid;
+    align-items: center;
+  }
+}
+
+mat-card-content {
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+}
