@@ -7,67 +7,67 @@ export class Shows extends Entity {
     id: true,
     generated: false,
   })
-  Title: string;
+  Title?: string;
 
   @property({
     type: 'string',
   })
-  Year: string;
+  Year?: string;
 
   @property({
     type: 'string',
   })
-  Rated: string;
+  Rated?: string;
 
   @property({
     type: 'string',
   })
-  Released: string;
+  Released?: string;
 
   @property({
     type: 'string',
   })
-  Runtime: string;
+  Runtime?: string;
 
   @property({
     type: 'string',
   })
-  Genre: string;
+  Genre?: string;
 
   @property({
     type: 'string',
   })
-  Director: string;
+  Director?: string;
 
   @property({
     type: 'string',
   })
-  Writer: string;
+  Writer?: string;
 
   @property({
     type: 'string',
   })
-  Actors: string;
+  Actors?: string;
 
   @property({
     type: 'string',
   })
-  Plot: string;
+  Plot?: string;
 
   @property({
     type: 'string',
   })
-  Language: string;
+  Language?: string;
 
   @property({
     type: 'string',
   })
-  Country: string;
+  Country?: string;
 
   @property({
     type: 'string',
   })
-  Awards: string;
+  Awards?: string;
 
   @property({
     type: 'string',
@@ -77,64 +77,63 @@ export class Shows extends Entity {
   @property({
     type: 'array',
     itemType: 'object',
-    required: true,
   })
-  Ratings: { Source: string; Value: string }[];
+  Ratings?: { Source?: string; Value?: string }[];
 
   @property({
     type: 'string',
   })
-  Metascore: string;
+  Metascore?: string;
 
   @property({
     type: 'string',
   })
-  imdbRating: string;
+  imdbRating?: string;
 
   @property({
     type: 'string',
   })
-  imdbVotes: string;
+  imdbVotes?: string;
 
   @property({
     type: 'string',
   })
-  imdbID: string;
+  imdbID?: string;
 
   @property({
     type: 'string',
   })
-  Type: string;
+  Type?: string;
 
   @property({
     type: 'string',
   })
-  totalSeasons: string;
+  totalSeasons?: string;
 
   @property({
     type: 'string',
   })
-  DVD: string;
+  DVD?: string;
 
   @property({
     type: 'string',
   })
-  BoxOffice: string;
+  BoxOffice?: string;
 
   @property({
     type: 'string',
   })
-  Production: string;
+  Production?: string;
 
   @property({
     type: 'string',
   })
-  Website: string;
+  Website?: string;
 
   @property({
     type: 'string',
   })
-  Response: string;
+  Response?: string;
 
   // Define well-known properties here
 
